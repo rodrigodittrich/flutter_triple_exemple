@@ -1,8 +1,14 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_triple_exemple/src/home_module/count_store.dart';
 import 'package:flutter_triple_exemple/src/home_module/home_page.dart';
 import 'package:flutter_triple_exemple/src/task_module/task_module_module.dart';
 
 class HomeModule extends Module {
+
+  @override
+  void binds(Injector i) {
+    i.add(CountStore.new);
+  }
 
   @override
   void routes(r) {
